@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Shipease Kids</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+
+</head>
+
+<body>
+    <div class="card">
+        <img src="{% static 'image/shipease-logo.webp' %}" alt="Shipease Logo" class="logo" />
+        <p class="subtitle">Fast. Secure. Easy - Welcome to Shipease!</p>
+        <form action="" method="get">
+            <input type="text" name="email" placeholder="example@mail.com"/>
+            <input type="password" name="password" placeholder="**********"/>
+            <button class="login-btn">Login</button>
+        </form>
+        <div class="link">
+            Don't have account? <a href="register">Register</a>
+        </div>
+        <div class="footer-link">
+            Forgot your password? <a href="#">Reset It</a>
+        </div>
+    </div>
+</body>
+
+</html>

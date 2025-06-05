@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shipease Kids</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+
+<body>
+    <header class="top-bar">
+        <div class="left">
+            <span class="shipping-label">FREE SHIPPING</span>
+            <span class="shipping-text">We Ship for FREE! No Hidden Charges, Just Savings!</span>
+        </div>
+        <div class="right-icons">
+            <a href="#">
+            <img src="{% static 'image/facebook.png' %}" alt="Facebook" class="logo">
+            </a>
+            <a href="#">
+            <img src="{% static 'image/instagram.png' %}" alt="Instagram" class="instagram">
+            </a>
+        </div>
+    </header>
+
+    <nav class="nav-bar">
+        <div class="logo-group">
+            <div class="logo-row">
+                <img src="{% static 'image/shipease-logo.webp' %}" alt="ShipEase Logo" class="logo-img">
+            </div>
+        </div>
+        <div class="search-bar">
+            <span class="search-icon">&#128269;</span>
+            <input type="text" class="search" placeholder="Search products...">
+            <button class="category-btn">Categories</button>
+        </div>
+        <button class="all-btn">All Products</button>
+        <div class="nav-icons">
+            <a href="login">
+                <img src="{% static 'image/user.png' %}" alt="User">
+            </a>
+            <div class="cart-icon-group">
+                <a href="checkout">
+                    <img src="{% static 'image/shopping-bag.png' %}" alt="Cart">
+                </a>
+                <span class="cart-count">1</span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="filter-section">
+        <div>
+            <label>Price Range</label>
+            <div class="range-bar">
+                <input type="range" min="0" max="5000" />
+                <span class="reset-icon">&#8635;</span>
+            </div>
+            <div class="price-labels">
+                <span>₹0</span>
+                <span>₹5000</span>
+            </div>
+        </div>
+
+        <div class="sort-select">
+            <select>
+                <option>Relevance</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="product-grid">
+        {% for i in cards %}
+        <div class="product-card">
+            <div class="img-container">
+                    <div class="badge">50%</div>
+                <img class="product-img" src="{{i.img}}" alt="Product" />
+            </div>
+            <h4 class="card-title">{{i.title}}</h4>
+            <div class="rating">4.5 <span>(15)</span></div>
+            <div class="price">
+                <span class="current">{{i.dis_mrp}}</span>
+                <span class="original">{{i.og_mrp}}</span>
+            </div>
+            <i class="shopping-cart cart-icon">Add To Cart</i>
+        </div>
+        {% endfor %}
+    </section>
+</body>
+
+</html>

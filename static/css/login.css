@@ -1,0 +1,81 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      padding: 40px 30px;
+      text-align: center;
+    }
+
+    .logo {
+      height: 70px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .login-btn {
+      background-color: #e62435;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      width: 100%;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .login-btn:hover {
+      background-color: #d01f2f;
+    }
+
+    .link {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .link a {
+      color: #002c5f;
+      font-weight: 600;
+      text-decoration: underline;
+      margin-left: 5px;
+    }
+
+    .footer-link {
+      background-color: #f0f2f5;
+      padding: 12px;
+      margin-top: 25px;
+      font-size: 14px;
+      border-radius: 6px;
+    }
