@@ -14,8 +14,9 @@
     <div class="card">
         <img src="{% static 'image/shipease-logo.webp' %}" alt="Shipease Logo" class="logo" />
         <p class="subtitle">Fast. Secure. Easy - Welcome to Shipease!</p>
-        <form action="" method="get">
-            <input type="text" name="email" placeholder="example@mail.com"/>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="example"/>
             <input type="password" name="password" placeholder="**********"/>
             <button class="login-btn">Login</button>
         </form>

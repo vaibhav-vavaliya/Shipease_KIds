@@ -1,0 +1,487 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body {
+    margin: 0;
+    background: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    width: 360px;
+    max-width: 90%;
+}
+.logo {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.logo img {
+    height: 50px;
+}
+.title {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 500;
+    color: #333;
+}
+.input-group {
+    margin-bottom: 18px;
+}
+.input-group input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.input-group input::placeholder {
+    color: #aaa;
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.checkbox input {
+    margin-right: 10px;
+}
+.checkbox a {
+    color: #0056b3;
+    text-decoration: none;
+}
+.register-btn {
+    width: 100%;
+    background: #e0071e;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+.footer a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 500;
+}
+.password-toggle {
+    position: relative;
+}
+.password-toggle input {
+    padding-right: 40px;
+}
+.password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.checkbox input {
+    margin-right: 10px;
+}
+.checkbox a {
+    color: #0056b3;
+    text-decoration: none;
+}
+.register-btn {
+    width: 100%;
+    background: #e0071e;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+.footer a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 500;
+}
+.password-toggle {
+    position: relative;
+}
+.password-toggle input {
+    padding-right: 40px;
+}
+.password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.checkbox input {
+    margin-right: 10px;
+}
+.checkbox a {
+    color: #0056b3;
+    text-decoration: none;
+}
+.register-btn {
+    width: 100%;
+    background: #e0071e;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+.footer a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 500;
+}
+.password-toggle {
+    position: relative;
+}
+.password-toggle input {
+    padding-right: 40px;
+}
+.password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.checkbox input {
+    margin-right: 10px;
+}
+.checkbox a {
+    color: #0056b3;
+    text-decoration: none;
+}
+.register-btn {
+    width: 100%;
+    background: #e0071e;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+.footer a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 500;
+}
+.password-toggle {
+    position: relative;
+}
+.password-toggle input {
+    padding-right: 40px;
+}
+.password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.checkbox input {
+    margin-right: 10px;
+}
+.checkbox a {
+    color: #0056b3;
+    text-decoration: none;
+}
+.register-btn {
+    width: 100%;
+    background: #e0071e;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+.footer a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 500;
+}
+.password-toggle {
+    position: relative;
+}
+.password-toggle input {
+    padding-right: 40px;
+}
+.password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.checkbox input {
+    margin-right: 10px;
+}
+.checkbox a {
+    color: #0056b3;
+    text-decoration: none;
+}
+.register-btn {
+    width: 100%;
+    background: #e0071e;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+.footer a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 500;
+}
+.password-toggle {
+    position: relative;
+}
+.password-toggle input {
+    padding-right: 40px;
+}
+.password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.checkbox input {
+    margin-right: 10px;
+}
+.checkbox a {
+    color: #0056b3;
+    text-decoration: none;
+}
+.register-btn {
+    width: 100%;
+    background: #e0071e;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+.footer a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 500;
+}
+.password-toggle {
+    position: relative;
+}
+.password-toggle input {
+    padding-right: 40px;
+}
+.password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.checkbox input {
+    margin-right: 10px;
+}
+.checkbox a {
+    color: #0056b3;
+    text-decoration: none;
+}
+.register-btn {
+    width: 100%;
+    background: #e0071e;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+.footer a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 500;
+}
+.password-toggle {
+    position: relative;
+}
+.password-toggle input {
+    padding-right: 40px;
+}
+.password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.checkbox input {
+    margin-right: 10px;
+}
+.checkbox a {
+    color: #0056b3;
+    text-decoration: none;
+}
+.register-btn {
+    width: 100%;
+    background: #e0071e;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.footer {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+.footer a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: 500;
+}
+.password-toggle {
+    position: relative;
+}
+.password-toggle input {
+    padding-right: 40px;
+}
+.password-toggle-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+}

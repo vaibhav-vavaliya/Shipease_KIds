@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShipEase RC Stunt Car</title>
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+<body>
+  <div class="top-bar">We Ship for FREE! No Hidden Charges, Just Savings!</div>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="{% static 'image/shipease-logo.webp' %}" alt="ShipEase Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href=" ">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="products">Shop</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="icons">
+      <img src="{% static 'image/search.png' %}" alt="Search" class="search-icon">
+      <form class="search-bar" action="/search" method="get">
+        <input type="text" name="q" placeholder="Search products...">
+        <button type="submit">Go</button>
+      </form>
+      <a href="/cart"><img src="{% static 'image/shopping-bag.png' %}" alt="Cart"></a>
+      <div class="account-dropdown">
+        <a href="#" class="account-link"><img src="{% static 'image/user.png' %}" alt="User"></a>
+        <div class="account-dropdown-content">
+          <span class="account-title">Account</span>
+          <hr>
+          <a href="/login">Login</a>
+          <a href="/register">Create Account</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="text">
+      <h1>360° Double-Sided RC Stunt Car for Kids with Remote Control</h1>
+      <p>Unleash non-stop fun with this 2.4G remote control stunt car featuring 360° flips, double-sided rolls, and 3D
+        deformation action.</p>
+      <a href="products" class="btn">SHOP NOW</a>
+    </div>
+    <div class="images">
+      <img src="{% static 'image/download.webp' %}" alt="RC Car" class="main-image" />
+    </div>
+  </section>
+
+</body>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const searchIcon = document.querySelector('.search-icon');
+        const searchBar = document.querySelector('.search-bar');
+        document.addEventListener('click', function(e) {
+          if (!searchBar.contains(e.target) && !searchIcon.contains(e.target)) {
+            searchBar.classList.remove('active');
+          }
+        });
+        searchIcon.addEventListener('click', function(e) {
+          e.stopPropagation();
+          searchBar.classList.toggle('active');
+          if (searchBar.classList.contains('active')) {
+            searchBar.querySelector('input').focus();
+          }
+        });
+      });
+    </script>
+
+</html>

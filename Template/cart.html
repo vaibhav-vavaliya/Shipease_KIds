@@ -1,49 +1,123 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout</title>
+    <title>Shopping Cart</title>
     <link rel="stylesheet" href="{% static 'css/cart.css' %}">
 </head>
-<body>
-    <section class="checkout-page">
-        <h1>Checkout</h1>
-        <div class="checkout-container">
-            <div class="billing-details">
-                <h2>Billing Details</h2>
-                <form action="/process_checkout" method="POST">
-                    {% csrf_token %}
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    
-                    <label for="address">Address:</label>
-                    <textarea id="address" name="address" required></textarea>
-                    
-                    <label for="payment-method">Payment Method:</label>
-                    <select id="payment-method" name="payment_method" required>
-                        <option value="credit_card">Credit Card</option>
-                        <option value="paypal">PayPal</option>
-                        <option value="cash_on_delivery">Cash on Delivery</option>
-                    </select>
-                    
-                    <button type="submit" class="checkout-btn">Place Order</button>
+
+<body style="background:#ff4e4e; min-height:100vh;">
+    <div class="cart-container">
+        <header class="cart-header"> 
+            <img src="{% static 'image/shipease-logo.webp' %}" alt="ShipEase Logo" class="logo">
+            <nav class="cart-nav">
+                <a href="/">Home</a>
+                <a href="products">Products</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <div class="account-dropdown">
+                    <a href="#" class="account-link">Account</a>
+                    <div class="account-dropdown-content">
+                        <span class="account-title">Account</span>
+                        <hr>
+                        <a href="/login">Login</a>
+                        <a href="/register">Create Account</a>
+                    </div>
+                </div>
+                <span class="cart-icon">&#128722;</span>
+            </nav>
+        </header>
+        <main class="cart-main">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="cart-product">
+                            <img src="{% static 'image/download.webp' %}" alt="Cart">
+                            <div>
+                                <form></form><button class="remove-btn" type="submit">Remove</button></form>
+                            </div>
+                        </td>
+                        <td>
+                            <form>
+                                <button type="submit" class="qty-update">Update</button>
+                            </form>
+                        </td>
+                        <td>
+                            <span>1499</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cart-product">
+                            <img src="{% static 'image/download.webp' %}" alt="Cart">
+                            <div>
+                                <form></form><button class="remove-btn" type="submit">Remove</button></form>
+                            </div>
+                        </td>
+                        <td>
+                            <form>
+                                <button type="submit" class="qty-update">Update</button>
+                            </form>
+                        </td>
+                        <td>
+                            <span>1499</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cart-product">
+                            <img src="{% static 'image/download.webp' %}" alt="Cart">
+                            <div>
+                                <form></form><button class="remove-btn" type="submit">Remove</button></form>
+                            </div>
+                        </td>
+                        <td>
+                            <form>
+                                <button type="submit" class="qty-update">Update</button>
+                            </form>
+                        </td>
+                        <td>
+                            <span>1499</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="cart-product">
+                            <img src="{% static 'image/download.webp' %}" alt="Cart">
+                            <div>
+                                <form></form><button class="remove-btn" type="submit">Remove</button></form>
+                            </div>
+                        </td>
+                        <td>
+                            <form>
+                                <button type="submit" class="qty-update">Update</button>
+                            </form>
+                        </td>
+                        <td>
+                            <span>1499</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="cart-summary-box">
+                <div class="cart-summary-row"><span>Subtotal</span><span></span></div>
+                <div class="cart-summary-row"><span>Tax</span><span></span></div>
+                <div class="cart-summary-row total"><span>Total</span><span></span></div>
+                <button class="checkout-btn" type="submit">Proceed to checkout &rarr;</button>
                 </form>
             </div>
-            <div class="order-summary">
-                <h2>Order Summary</h2>
-                <ul>
-                    <li>Item 1 - ₹500</li>
-                    <li>Item 2 - ₹1000</li>
-                    <li>Item 3 - ₹1500</li>
-                </ul>
-                <p>Total: ₹3000</p>
-            </div>
-        </div>
-    </section>
+        </main>
+        <footer class="cart-footer">
+            Copyright 2025 - ShipEase
+        </footer>
+    </div>
 </body>
+
 </html>
