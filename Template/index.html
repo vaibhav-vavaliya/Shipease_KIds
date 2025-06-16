@@ -36,16 +36,27 @@
             <input type="text" class="search" placeholder="Search products...">
             <button class="category-btn">Categories</button>
         </div>
-        <button class="all-btn">All Products</button>
+        <div class="navbar">
+            <a href="/">Home</a>
+            <a href="/products">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
         <div class="nav-icons">
-            <a href="login">
-                <img src="{% static 'image/user.png' %}" alt="User">
-            </a>
+            <div class="account-dropdown">
+                <a href="#" class="account-link"><img src="{% static 'image/user.png' %}" alt="User"></a>
+                <div class="account-dropdown-content">
+                    <span class="account-title">Account</span>
+                    <hr>
+                    <a href="/login">Login</a>
+                    <a href="/register">Create Account</a>
+                </div>
+            </div>
             <div class="cart-icon-group">
-                <a href="checkout">
+                <a href="/cart">
                     <img src="{% static 'image/shopping-bag.png' %}" alt="Cart">
                 </a>
-                <span class="cart-count">1</span>
+                <span class="cart-count" id="cart-count">{{ cart_count|default:0 }}</span>
             </div>
         </div>
     </nav>
@@ -85,10 +96,37 @@
                 <span class="current">{{i.dis_mrp}}</span>
                 <span class="original">{{i.og_mrp}}</span>
             </div>
-            <i class="shopping-cart cart-icon">Add To Cart</i>
+            <form method="GET">
+                <input type="hidden" name="uid" value="{{ uid }}">
+                <input
+            <img src="{% static 'image/shopping-cart.png' %}" alt="Add to Cart" class="cart-icon">
+            </form>
         </div>
         {% endfor %}
     </section>
+
+<div id="add-to-cart-modal" style="display:none;">
+    <div class="add-to-cart-modal-overlay">
+        <div class="add-to-cart-modal-content">
+            <button id="close-modal-btn" class="add-to-cart-modal-close">&times;</button>
+            <div class="add-to-cart-modal-body">
+                <img id="add-to-cart-modal-img" src="" alt="Product" class="add-to-cart-modal-img">
+                <div class="add-to-cart-modal-details">
+                    <div id="add-to-cart-modal-title" class="add-to-cart-modal-title"></div>
+                    <div class="add-to-cart-modal-success">
+                        <span class="add-to-cart-modal-check">&#10003;</span> Added to cart successfully!
+                    </div>
+                    <div class="add-to-cart-modal-actions">
+                        <a href="cart" class="add-to-cart-modal-btn">VIEW CART</a>
+                        <a href="checkout" class="add-to-cart-modal-btn">CHECKOUT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="{% static 'JS/cart-count.js' %}"></script>
 </body>
 
 </html>

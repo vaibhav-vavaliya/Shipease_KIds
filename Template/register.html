@@ -16,7 +16,8 @@
             <img src="{% static 'image/shipease-logo.webp' %}" alt="Shopease Logo" />
         </div>
         <div class="title">Fast. Secure. Easy - Welcome to Shipease!</div>
-        <form action="" method="get">
+        <form action="" method="post">
+            {% csrf_token %}
             <div class="input-group">
                 <input type="text" name="fullname" placeholder="Rohit Varma" required />
             </div>
